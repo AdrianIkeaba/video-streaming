@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --background-color: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.video-container {
+    max-width: 1200px;
+    width: 95%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+video {
+    width: 100%;
+    max-height: 80vh;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--secondary-color);
+}
+
+.video-controls button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-controls button:hover {
+    background-color: var(--primary-color);
+}
+
+#volumeSlider {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-controls {
+        flex-direction: column;
+    }
+
+    .video-controls button, 
+    #volumeSlider {
+        margin: 10 px 0;
+        width: 100%;
+    }
+}
